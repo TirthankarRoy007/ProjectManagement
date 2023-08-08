@@ -11,7 +11,7 @@ const boardModel = new mongoose.Schema({
         type: [String]
     },
     lists: {
-        type: [String]
+        ref: 'List'
     },
     isDeleted: {
         type: Boolean,
