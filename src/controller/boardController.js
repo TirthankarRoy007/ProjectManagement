@@ -69,7 +69,7 @@ exports.deleteBoardById = async (req, res) => {
     board.isDeleted = true;
     await board.save();
 
-    return res.send({ status: false, message: 'Board deleted successfully' });
+    return res.send({ status: true, message: 'Board deleted successfully' });
   } catch (error) {
     console.error('Error deleting board:', error);
     return res.status(500).send({ status: false, message: 'Internal server error' });
