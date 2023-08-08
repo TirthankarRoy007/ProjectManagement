@@ -106,7 +106,7 @@ exports.deleteCardById = async (req, res) => {
         card.isDeleted = true;
         await card.save();
 
-        return res.send({ status: false, message: 'Card deleted successfully' });
+        return res.send({ status: true, message: 'Card deleted successfully' });
     } catch (error) {
         console.error('Error deleting card:', error);
         return res.status(500).send({ status: false, message: 'Internal server error' });
